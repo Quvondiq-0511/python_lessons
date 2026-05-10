@@ -279,18 +279,87 @@ nonushta.append("besh barmoq")
 "____________________________________________________________________"
 
 
-# 11- dars xatolar bilan ishlash
+# 13- dars. Dictionary(lug'at)
+
+onam={'ism':'Ayxonim','t_yili':1966,'manzili':"Qoraqalpog'iston Respublikasi, Elliqa'la tumani"}
+# print(f"Onamning ismi: {onam['ism']}, tug'ilgan tili:{onam['t_yili']}, \
+#       tug'ilgan joyi {onam['manzili']} ")
+      
+
+taomlar={'quvondiq':'manti','jasur':'chalpak','bahram':'palov','ayxonim':'qo\'virdoq',
+         'sadoqat':'sho\'rva','shahnoza':'lag\'mon','shoxista':'barak'}
+# print(f"Quvondiqning sevimli taomi: {taomlar['quvondiq']} \
+#       Jasurning sevimli taomi: {taomlar['jasur']} \
+#           shoxistaning sevimli taomi: {taomlar['shoxista']}")
 
 
-    print ("Hello World!")
+Python_lugat={'integer':'butun son','float':'suzuvchi sonlar','if':'agar shart qiymati', 
+              'elif':'2 ta toki undan ortiq shart uchun', 'append()':'qo\'shish funksiyasi'}
+
+# nom= input("O'rganmoqchi bo'lgan so'zingizni kiriting:\n >>> ")
+# soz= Python_lugat.get('nom',"Bunday qiymat mavjud emas")
+# print(soz)
 
 
+"_______________________________________________________________________________________"
 
+#15-dars. Lug'at bilan ishlash 
 
+python={'integer':'butun sonlar',
+        'float':'Ratsional son',
+        'if':'agar sharti',
+        'input':'userdan ma\'lumot olish',
+        'elif':'agar sharti ikkinchisi uchun',
+        'string':'son bo\'lmagan malumotlar',
+        'append()':'malumot qo\'ishish uchun ishlatiladi',
+        'title()':'Bosh harfda chiqarish uchun',
+        'uppear()':'Hamma belgilarni katta qiladi',
+        'tuple':'o\'zgarmas qilish uchun ishlatiladi'}
 
+# for soz, manosi in sorted(python.items()) :
+#     print(f"{soz.title()} so'zining ma'nosi {manosi} deganidir")
 
+davlat_poytaxt ={'Uzbekistan': 'Tashkent',
+                 'Spain':'Madrid',
+                 'Russia':'Moscow',
+                 'Turcia':'Ankara',
+                 'England':'London',
+                 'Germany':'Berlin',
+                 'Iran':'Tehran',
+                 'USA':'Washinton'}
+# print("Davlatlar:")
+# for davlat in sorted(davlat_poytaxt.keys()):
+#     print(davlat)
+# print('\n Poytaxtlar: ')
+# for poytaxt in sorted(davlat_poytaxt.values()):
+#     print(poytaxt)  
 
+# davlat = input("Xohlagan davlatingiz nomini kiriting:\n>>> ")
+# k = davlat_poytaxt.get(davlat)
+# if k == None:
+#     print("Bunday davlat nomi ro'yxatimizda mavjud emas,"
+#           "iltimos boshqa nom kiriting")
+# else:
+#     print(f"{davlat}ning poytaxti {davlat_poytaxt[davlat]}")
 
+menu= {'Palov':'45000',
+       'Mastava':'30000',
+       'Qozon kabob':'50000',
+       'Manti':'40000',
+       'Somsa':'10000',
+       'Besh barmoq': '50000',
+       "Sho'rva":'35000'}
+buyurtmalar=[]
+for k in range(3):
+  buyurtma_taom = input('Buyurtma qilmoqchi bo\'lgan taomingizni kiriting:\n>>>')
+  buyurtmalar.append(buyurtma_taom.title())
+
+for buyurtma in buyurtmalar:
+    taom = menu.get(buyurtma)
+    if taom == None:
+        print(f"Kechirasiz bizda {buyurtma} nomli taomimiz yo'q")
+    else:
+        print(f"{buyurtma} narxi {menu[buyurtma]} so'm.")
 
 
 
